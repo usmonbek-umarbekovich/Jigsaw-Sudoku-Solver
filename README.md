@@ -7,5 +7,5 @@ Solving jigsaw sudoku puzzles with python.
 * See the examples for more detail: `resources/boards.txt`
 
 
-### How to use
+### How to use:
 * Run `main.py`
