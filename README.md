@@ -5,3 +5,7 @@ Solving jigsaw sudoku puzzles with python.
 * The puzzles should be given in a `.txt` file.
 * Each block of the puzzle should be in the following format: `rowcolumn`:`value` (11:3)
 * See the examples for more detail: `resources/boards.txt`
+
+
+### How to use
+* Run `main.py`
