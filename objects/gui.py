@@ -302,12 +302,12 @@ class Sudoku:
           row, col = pos
         
         for num in range(1, 10):
+          shape[pos], board[row][col] = num, num
+          self.canvas.itemconfigure(self.text_ids[row][col], text=str(num))
+          sleep(6 / self.speed.get())
           if helpers.is_valid(board, shape, num, pos):
 
             # assign this number and check next entries
-            shape[pos], board[row][col] = num, num
-            self.canvas.itemconfigure(self.text_ids[row][col], text=str(num))
-            sleep(10 / self.speed.get())
             self.canvas.update()
 
             if _recursive():
@@ -316,7 +316,7 @@ class Sudoku:
             # _recursive is False, then backtrack and try again
             shape[pos], board[row][col] = 0, 0
             self.canvas.itemconfigure(self.text_ids[row][col], text='')
-            sleep(10 / self.speed.get())
+            sleep(6 / self.speed.get())
             self.canvas.update()
             
         # all numbers checked, Sudoku can't be solved
