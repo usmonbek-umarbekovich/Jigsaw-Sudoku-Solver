@@ -302,10 +302,10 @@ class Sudoku:
           row, col = pos
         
         for num in range(1, 10):
-          shape[pos], board[row][col] = num, num
           self.canvas.itemconfigure(self.text_ids[row][col], text=str(num))
           sleep(6 / self.speed.get())
           if helpers.is_valid(board, shape, num, pos):
+            shape[pos], board[row][col] = num, num
 
             # assign this number and check next entries
             self.canvas.update()
